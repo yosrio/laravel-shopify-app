@@ -9,5 +9,10 @@ Route::middleware([
     MiddlewareShopify\VerifyWebRequest::class
 ])->group(function () {
     Route::get('install', [AppController::class, 'install']);
-    Route::get('redir', [AppController::class, 'redir']);
+    Route::get('redirect', [AppController::class, 'redirect']);
+});
+
+Route::middleware([
+])->group(function () {
+    Route::get('home', [Home\IndexController::class, 'index'])->name('home');
 });
