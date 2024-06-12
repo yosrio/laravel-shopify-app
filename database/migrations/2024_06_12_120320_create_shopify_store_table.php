@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('shop_url')->nullable();
             $table->text('shop_token')->nullable();
-            $table->text('data')->nullable();
+            $table->json('data')->nullable();
             $table->timestamps();
         });
     }

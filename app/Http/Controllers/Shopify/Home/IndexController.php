@@ -27,6 +27,6 @@ class IndexController extends Controller
      */
     public function index()
     {
-        echo "home";
+        return view('welcome');
     }
 }
